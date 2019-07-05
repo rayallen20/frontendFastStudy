@@ -1,0 +1,34 @@
+表单:
+三个方面:表单域 提示文本 表单元素
+表单域:收集表单域内部的表单元素的值,提交至服务端
+action属性:提交的后台地址
+需要配合button标签(该标签是否能够缺省提交 取决于浏览器 IE不行 其他的都行)或者type="submit"来使用
+表单元素中的值想要被提交,需要name属性
+
+提示文本:提示用户表单用途的文字信息.本质上和表单无关.
+
+表单元素:
+    input分类:
+        text:单行文本框
+        password:密码框
+        radio:单选框
+        checkbox:复选框
+        file:文件上传控件
+        submit:提交按钮
+        button:普通按钮
+
+    button:默认类型为submit(不同浏览器之间对这个默认类型有兼容问题)
+
+    select:下拉框.
+        配合option标签使用.
+
+    textarea:文本域/多行文本输入框
+
+表单元素的属性:
+    value:表单内部包含的值
+    name:表单元素的属性
+    checked:针对radio和checkbox的默认选中项
+    selected:针对select的默认选中项
+
+label标签:
+    将表单元素和提示文本关联起来.点击文字就相当于点击了表单.

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!--只写src的话,只是加载了资源,但不代表播放.-->
+    <!--autoplay:自动播放-->
+    <!--controls:播放控件-->
+    <!--loop:循环播放-->
+    <video src="../resource/media/mp4.mp4" autoplay controls loop></video>
+    <!--优点:方便,不需借助第三方服务.-->
+    <!--缺点:兼容性差.低版本浏览器不支持video标签.-->
+    <!--使用场景:手机端(短视频类)-->
+
+    <!--兼容写法:前提:准备3种不同格式的视频-->
+    <video autoplay controls loop>
+        <!--浏览器会从上往下找source标签.如果当前浏览器可支持mp4格式,则会直接把mp4格式的多媒体文件解析出来,之后的source标签忽略.-->
+        <!--查找原则:从上到下依次查找,如果找到当前浏览器识别的格式,则将这个视频解析出来,如果不识别,继续往下查找.直到找到自己可识别的source.-->
+        <!--如果都不识别,则一定识别a标签.-->
+        <!--如果第一个不识别,继续读第2个source;以此类推.-->
+        <!--而且目前市面上大部分浏览器对mp4格式的支持都是不错的.-->
+        <source src="../resource/media/mp4.mp4">
+        <source src="../resource/media/mp4.webm">
+        <source src="../resource/media/mp4.ogg">
+        <!--如果以上source都不认识,才会读到a标签.如果以上source中有可以解析的资源,就读不到a标签了.-->
+        <a href="#">浏览器版本太低,需升级.</a>
+    </video>
+</body>
+</html>

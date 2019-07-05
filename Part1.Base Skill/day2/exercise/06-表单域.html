@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>测试表单标题</h1>
+    <!--表单域:收集区域内部的所有表单信息并提交给后台.提交动作需要配合submit按钮.-->
+    <!--form标签的action属性:确认表单提交到地址-->
+    <!--form表单提交需要添加name属性才可以将表单中的内容提交出去-->
+    <!--form标签的method属性:决定提交方式 (get/post)-->
+    <form action="./demo.php">
+        用户名:<input name="username" type="text">
+        <br>
+
+        密码:<input name="password" type="password">
+        <br>
+
+        性别:
+        <input name="gender" type="radio" value="male" checked="checked"> 男
+        <input name="gender" type="radio" value="female"> 女
+        <input name="gender" type="radio" value="unknown"> 保密
+        <br>
+
+        爱好:
+        <input type="checkbox" name="hobby" value="smoke" checked="checked">抽烟
+        <input type="checkbox" name="hobby" value="drink">喝酒
+        <input type="checkbox" name="hobby" value="treeNewBee">吹牛逼
+        <br>
+
+        上传图片:<input type="file" name="img">
+        <br>
+
+        所在城市:
+        <select name="city">
+            <option value="east">东部王国</option>
+            <option value="ka">卡里姆多</option>
+            <option value="ai" selected>埃索达</option>
+            <option value="northLand">诺森德</option>
+        </select>
+        <br>
+
+        多行文本输入:
+        <textarea name="multiText" style="width: 300px; height: 100px"></textarea>
+        <br>
+
+        <input type="button" value="提交">
+        <button>提交</button>
+        <input type="submit">
+    </form>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="demo.php">
+        <!--注意:placeholder属性的值只是一个占位文本,不能当做value值来使用.它的值的作用是用来提示用户当前表单元素应该输入的内容.-->
+        <!--即:placeholder里边的值不会被提交-->
+        <input type="text" placeholder="请输入某些内容">
+        <br>
+        <input type="text" value="请输入某些内容">
+        <br>
+
+        <!--autofocus:该属性用于自动获取焦点-->
+        <input type="text" autofocus>
+        <br>
+
+        <!--autocomplete="on":自动补全. 前提:该字段必须提交过一次.也就是说这个字段必须有name属性.因为没有name属性无法提交出去,实际上该属性的默认值就是on.-->
+        <!--这个属性有兼容性问题.更多的在实现时是用js自己实现的,-->
+        <input type="text" autocomplete="on" name="complete">
+        <br>
+        <!--required:自动验证表单.即该字段值不能为空.-->
+        <input type="text" required>
+        <br>
+
+        <input type="submit" value="submit">
+        <br>
+
+    </form>
+</body>
+</html>

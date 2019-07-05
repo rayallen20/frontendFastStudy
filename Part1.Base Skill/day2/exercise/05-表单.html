@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>测试表单标题</h1>
+    <!--表单标签:input 单标签-->
+    <!--type 表单的类型-->
+    <!--type="text" 单行文本输入框-->
+    用户名:<input type="text" name="username">
+    <br>
+
+    <!--type="password" 密码输入框-->
+    密码:<input type="password" name="password">
+    <br>
+
+    <!--type="radio" 单选框 即:从多个选项中选择1个 要想单选框生效 所有的选项必须具备相同的name属性-->
+    性别:
+    <input name="gender" type="radio" value="male" checked="checked"> 男
+    <input name="gender" type="radio" value="female"> 女
+    <input name="gender" type="radio" value="unknown"> 保密
+    <br>
+
+    <!--type="checkbox" 多选框 可以选择一个或者多个-->
+    爱好:
+    <input type="checkbox" name="hobbit" value="smoke" checked="checked">抽烟
+    <input type="checkbox" name="hobbit" value="drink">喝酒
+    <input type="checkbox" name="hobbit" value="treeNewBee">吹牛逼
+    <br>
+
+    <!--type="file" 上传文件-->
+    上传图片:<input type="file" name="img">
+    <br>
+
+    <!--下拉框:select标签-->
+    所在城市:
+    <select name="city">
+        <!--selected属性:默认被选中-->
+        <option value="east">东部王国</option>
+        <option value="ka">卡里姆多</option>
+        <option value="ai" selected>埃索达</option>
+        <option value="northLand">诺森德</option>
+    </select>
+    <br>
+
+    <!--多行文本输入框:textarea标签-->
+    <!--cols:每行可以输入多少个字符 rows:最大行数-->
+    多行文本输入:
+    <!--<textarea name="multiText" cols="30" rows="10"></textarea>-->
+    <textarea name="multiText" style="width: 300px; height: 100px"></textarea>
+    <br>
+
+    <!--type="button" 按钮 value属性:表示表单中包含的值/内容-->
+    <!--普通按钮-->
+    <input type="button" value="提交">
+    <!--button也可以提交!-->
+    <button>提交</button>
+    <!--type="submit" 提交按钮-->
+    <!--提交按钮-->
+    <input type="submit">
+
+    <!--value属性:表示表单里包含的值.选择性的input框必须硬编码value值.譬如type="radio/checkbox"的input标签-->
+    <!--如果一个元素的属性名和属性值相同(例如:checked="checked"),只写属性名即可.-->
+    <!--checked属性:添加这个属性的input框会成为默认选中项.主要针对radio/checkbox-->
+</body>
+</html>
