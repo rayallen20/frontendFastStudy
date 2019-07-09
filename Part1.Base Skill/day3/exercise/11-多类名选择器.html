@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*.first-div {*/
+        /*    color: red;*/
+        /*    font-size: 30px;*/
+        /*}*/
+
+        /*.second-div {*/
+        /*    color: red;*/
+        /*    font-size: 40px;*/
+        /*}*/
+
+        .red {
+            color: red;
+        }
+
+        .fz-40 {
+            font-size: 40px;
+        }
+
+        .fz-30 {
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!--需求:有两个相同的标签,它们有一些共同的CSS样式,但是也有一些差异化的CSS样式.-->
+    <!--
+        有2个div:均要求文字为红色,其中一个为font-size=30,另一个font-size=40
+    -->
+    <!--同样权重的选择器,后定义的覆盖先定义的-->
+    <div class="red fz-30 fz-40">文字1</div>
+    <div class="red fz-40">文字2</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*
+        步骤:
+        a. 声明id选择器
+        b. 调用id选择器
+        语法:
+        #id名 {
+            属性名1:属性值1;
+            属性名2:属性值2;
+        }
+
+        id选择器和类选择器的不同之处在于:
+        类选择器:一次声明,多次调用.
+        id选择器:一次声明,一次调用.虽然也有效果,但这是由于浏览器的容错处理,并不应该这么写.
+        通常配合JS使用,而非是配合CSS使用.
+        */
+        #box {
+            color: lime;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        #box2 {
+            color: lime;
+            font-size: 30px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">当然是选择原谅她!</div>
+    <span id="box2">青青草原头上顶</span>
+</body>
+</html>

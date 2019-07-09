@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!--自动播放:刷新之后不会再自动播放了.如果在server环境下,是可以刷新后继续自动播放的-->
+    <!--基本上和video标签类似-->
+    <!--audio标签支持的音频文件类型:ogg/mp3/wav-->
+    <!--普遍的现在大部分都支持mp3-->
+    <audio src="../resource/media/bgsound.mp3" autoplay controls loop></audio>
+
+    <audio>
+        <source src="../resource/media/bgsound.mp3">
+        <source src="../resource/media/bgsound.ogg">
+        <source src="../resource/media/bgsound.wav">
+        <a href="#">浏览器版本过低</a>
+    </audio>
+</body>
+</html>

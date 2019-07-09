@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        a {
+            font-size: 20px;
+        }
+        /*
+        步骤:
+        1. 选中要操作状态的元素
+        2. 设定要生效的状态
+        语法:
+        选择器:伪类选择器{
+            属性名1:属性值1;
+            ...
+        }
+        Tips:步骤1中的选择器,可以是任何选择器(标签选择器/类选择器/id选择器)
+        本例中:hover就是伪类选择器
+
+        a标签的伪类选择器:
+        :link:没有被访问过的状态
+        :visited:被访问过的状态
+        :hover:鼠标悬停的状态
+        :active:鼠标按住不放时的状态
+        */
+        #a:link {
+            color: red;
+        }
+
+        #a:visited {
+            color: purple;
+        }
+
+        #a:hover {
+            color: lime;
+        }
+
+        #a:active {
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <a href="#" id="a">链接</a>
+</body>
+</html>
