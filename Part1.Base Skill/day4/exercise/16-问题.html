@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box {
+            color: green;
+        }
+
+        /*为什么div后渲染的,但是没变成红色?*/
+        /*答案:权重不同.*/
+        div {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">文字</div>
+</body>
+</html>

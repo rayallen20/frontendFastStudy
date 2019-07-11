@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            /*块元素的特点1:可以直接写宽高*/
+            height: 200px;
+            background-color: red;
+        }
+
+        span {
+            width: 100px;
+            height: 100px;
+            background-color: lime;
+        }
+
+        img {
+            width: 600px;
+        }
+
+        input {
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!--
+    块级标签:div p h1-h6 ol ul li dl dt dd header footer aside article section
+    特点:
+        1. 可以直接写宽高
+        2. 独占一行
+        3. 默认宽度是父级标签的宽度
+        4. 一般用于容器布局.可嵌套其他块级元素或行内元素.
+        5. p标签不要包裹其他块级元素.因为浏览器在解析时会先将p标签中的内容以div标签为分割点切分为2部分,
+           然后将这个div标签和切分后的2个p标签按照同级元素的关系解析.换言之,浏览器不允许p标签中包裹其他
+           块级元素.
+    -->
+    <div></div>
+    <div></div>
+    <div></div>
+    <p>文<div></div>字</p>
+
+    <!--
+    行内元素:span a 所有处理文字的标签,如:strong ins b del s u i em
+    特点:
+        1. 宽高对于行内元素没有作用
+        2. 可以和其他行内元素排成一排
+        3. 内容有多大,行内元素就被撑到多大,如果没有内容,那么就没有大小.(把它理解为气球,如果没有吹气,就啥都没有)
+        4. 一般用来包裹文字或做一些小的装饰
+        5. 行内元素不要嵌套块级元素.a标签除外.因为a有可能包裹块级元素.而且这个技巧在移动端页面很常用.
+    -->
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+    <a href="#">4</a>
+    <a href="#">5</a>
+    <a href="#">6</a>
+
+    <!--
+    行内块元素:img input
+    既可以写宽高,又可以允许其他行内元素排成一排.结合了行内元素和块元素的特点.(把行内块元素看成一个特殊的文本)
+    特点:
+        1. 可以允许和其他行内元素排成一排
+        2. 可以设置宽高
+    -->
+    <img src="../resource/mienv.jpg" alt="美女">
+    <label>用户名:<input type="text"></label>
+</body>
+</html>

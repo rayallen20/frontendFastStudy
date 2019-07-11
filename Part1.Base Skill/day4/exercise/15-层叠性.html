@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box {
+            /*在权重相同的情况下,后渲染的覆盖先渲染的.*/
+            color: green;
+            color: red;
+        }
+
+        /*谁后渲染,谁就是最终效果.类的调用位置对结果是没有影响的,决定最终结果的是类的声明位置.*/
+        .test2 {
+            color: green;
+        }
+
+        .test {
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">今天的内容确实TMD有点多.而且,前端还真J8不简单,是我小瞧这支部队了战力了.</div>
+
+    <div class="test test2">测试</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .ancestor {
+            /*
+            给ancestor的内容设置的颜色,却应用到了descendant中的文本.
+            这是因为descendant的元素继承了ancestor的元素的属性.
+            核心底层:descendant继承了ancestor的color属性.
+            那么问题来了:哪些属性可以继承?
+            */
+            width: 300px;
+            color: red;
+            text-align: center;
+            font-size: 80px;
+            height: 200px;
+        }
+
+        .descendant {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="ancestor">
+        <div class="descendant">文字</div>
+        <a href="#">百度两下</a>
+    </div>
+</body>
+</html>

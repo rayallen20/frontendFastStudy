@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*后代选择器*/
+        /*
+        选择器1 空格 选择器2
+        两个选择器满足后代关系即可
+        */
+        /*.father .son {*/
+        /*    color: pink;*/
+        /*}*/
+
+        /*子代选择器*/
+        /*
+        选择器1 > 选择器2 {CSS语句}
+        两个元素之间必须满足子父级关系
+        */
+        /*.father > .son {*/
+        /*    color: pink;*/
+        /*}*/
+
+        .oldWang .son {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="uncle">
+            <div class="son">儿子</div>
+        </div>
+    </div>
+
+    <div class="oldWang">
+        <div class="oldLi">
+            <div class="son">儿子</div>
+        </div>
+    </div>
+
+    <div class="box">
+        <span class="notAvailable"></span>
+    </div>
+</body>
+</html>

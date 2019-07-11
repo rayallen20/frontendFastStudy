@@ -1,0 +1,11 @@
+/*注意:CSS文件不需要加<style>标签.因为<style>标签是HTML的内容.*/
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    color: lightblue;
+}
+
+div {
+    color: green;
+}

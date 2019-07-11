@@ -1,0 +1,27 @@
+1. 块级元素
+    a. 可设置宽高
+    b. 独占一行
+    c. 默认宽度是父级元素宽度
+    d. p标签内不要嵌套块级元素
+    用途:用作布局
+    块级元素包括:div p ol ul li dl dd dt header footer aside article section
+    浏览器默认属性:display:block
+    把块级元素看做富二代,天生从父级元素继承宽度.
+
+2. 行内元素
+    a. 不能设置宽高
+    b. 行内标签允许其他的行内标签排成一排
+    c. 不要使用行内元素嵌套块级元素,a标签除外
+    用途:文本
+    行内元素包括:span strong ins b del s u i em
+    浏览器默认属性:display:inline
+    把行内元素看成穷屌.不能设置宽高,不存在继承的概念.
+
+3. 行内块元素
+    a. 可设置宽高
+    b. 也允许和其他行内元素排成一排
+    c. 本质上是一种特殊的行内标签(text-align和line-height可控制行内块元素)
+    用途:图片或input框
+    行内块元素包括:img input
+    浏览器默认属性:display:inline-block
+    把行内块元素看成逆袭的屌丝,可设置宽高,又可和其他行内元素排成一排.且不继承父级元素宽度.

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box {
+            width: 800px;
+            height: 800px;
+            /*背景颜色 注意:设置透明度是背景的透明度而非内容的透明度*/
+            /*background-color: rgba(100,100,100,0.5);*/
+            /*背景图片 注意:如果不设置的话,图片默认是平铺.即以重复的方式铺满整个容器*/
+            /*background-image: url("../resource/mienv.jpg");*/
+            /*背景平铺 background-repeat: no-repeat || repeat; 默认值为repeat 即平铺 no-repeat 即不平铺 repeat-x/y 即沿水平/垂直方向平铺*/
+            /*background-repeat: no-repeat;*/
+            /*背景滚动 background-attachment: scroll(跟随滚动条滚动) || fixed(不跟随滚动条滚动 很少用);*/
+            /*background-attachment: scroll;*/
+            /*背景位置 background-position*/
+            /*
+            取值:
+            1.方位名词 left right top bottom center 顺序可调换
+                默认值为: top left(方位名词顺序可调换)
+                实际上这个属性是2个值:水平位置 垂直位置
+
+            2.像素
+                程序中的坐标系是以左上角为原点 水平向右为x轴正方向 垂直向下为y轴正方向
+                此处计算方式为:
+                    (1). 以容器左上角的顶点为起点,图片的左上角顶点为终点;
+                    (2). 以水平向右为x轴正方向,以垂直向下为y轴正方向;
+                    (3). 起点移动到终点在水平方向和垂直方向上移动的距离.
+                    注意:以像素为取值单位时,第一个参数为水平移动距离,第二个参数为垂直移动距离.
+
+            3. 百分比(了解即可 因为很少有人用)
+                此处计算方式为:
+                    (1). 此处百分比的含义为:容器宽高的百分比.即图片左上角移动水平/垂直方向上移动容器宽/高的百分之多少.
+                    (2). 但不单纯是移动.移动后图片将在水平/垂直方向上往回移动1/2自身宽/高的距离.
+
+            4. 混写
+                例如: 100px top.
+                混写时要注意:混写必须考虑顺序.先水平再垂直.
+            */
+            /*background-position: 100px top;*/
+
+            /*背景简写 背景颜色 背景图片地址 背景平铺 背景滚动 背景位置 顺序可调换*/
+            background: rgba(100,100,100,0.5) url("../resource/mienv.jpg") no-repeat scroll 100% 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">1111</div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*样式从大往小做,先做大面上的内容,再做细节上的内容.*/
+        li {
+            /*这个font-size如果写在a标签的选择器中,就会有行间距,如果写在li中,就没有行间距.*/
+            /*
+            TODO:为啥字体大小在a标签中设置就有行高,而在li标签中设置就没有?
+            */
+            /*font-size: 12px;*/
+            /*此处,在li中写color:red;是无效的.*/
+            /*原因:a标签的特殊性.a标签默认有颜色,*/
+            /*同理,要去掉a标签的下划线,只能在a标签的选择器中确认该属性.*/
+        }
+
+        a {
+            /**/
+            font-size: 12px;
+            color: #666;
+            text-decoration: none;
+        }
+
+        span {
+            color: #f40;
+        }
+    </style>
+</head>
+<body>
+<!--还是那句话:无论页面样式简单还是复杂,优先考虑的问题是:页面的结构是如何的.换言之即:先把结构搭出来,再考虑样式.-->
+    <ul>
+        <li><a href="#"><span>财经 |</span> 24省份一季度GDP增速超全国：海南逆袭吉林垫底</a></li>
+        <li><a href="#">马云演讲呛贾跃亭：认为BAT垄断是自己的想象力不行</a></li>
+        <li><a href="#">山西最紧张时刻：万亿煤炭巨债缠身 60%债务在银行</a></li>
+        <li><a href="#"><span>股票 |</span> A股夏季攻势: 管理层坚定维稳 黄金坑迎养老金</a></li>
+        <li><a href="#"><span>科技 |</span> 电视盒子渐成鸡肋 生产商、代理商谋求转型</a></li>
+    </ul>
+</body>
+</html>

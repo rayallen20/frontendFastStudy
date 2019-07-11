@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 500px;
+            height: 500px;
+            border: 1px solid black;
+            text-align: center;
+            /*如果让图片垂直居中,就不能按照单行文本的计算方式(line-height=容器高度)计算了.*/
+            line-height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        大文字
+        <!--把行内块元素看做一种特殊的文本-->
+        <img src="../resource/zyx.jpg" alt="fuck">
+    </div>
+
+</body>
+</html>
