@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .wrapper {
+            width: 950px;
+            /*先写一个高和背景色 随便写 方便调试 */
+            height: 1000px;
+            /*background-color: gray;*/
+        }
+
+        h1 {
+            /*height: 75px;*/
+            text-align: center;
+            line-height: 75px;
+            /*小图片加载快 而且可以通过设置水平平铺来代替大图片*/
+            background: url("../resource/images/jb.jpg") 0 0 repeat-x;
+        }
+
+        .info {
+            /*height: 500px;*/
+            /*通常来讲盒子很少写高度 都是让里边的内容自动撑开的*/
+            background-color: blue;
+            /*水平居中不要加给item 因为不仅要求.item里的文字居中 而且要求.item居中. 把行内块元素看做文本!*/
+            text-align: center;
+        }
+
+        .item {
+            display: inline-block;
+            width: 176px;
+            height: 256px;
+        }
+    </style>
+</head>
+<body>
+<!--
+1. 先做盒子分配 即:先知道哪个地方该有容器
+还是那句话:先划分结构再做样式
+
+2. 一个大盒子被分为2个小盒子 nav部分和正文部分
+从模块化的角度来看 底部的5个div 应该是包一层div的 而不是单独飞出来的5个div
+
+3. 不要着急把所有结构都写进去 定义完毕一个结构之后 把一个结构的样式写完 再写更进一步的结构
+-->
+
+    <!--wrap/wrapper:通常在前端表示外围容器的意思-->
+    <div class="wrapper">
+        <h1>家居大视野</h1>
+        <div class="info">
+            <!--item:通常在前端表示子项.而且这个词一般代表着可以出现多个.-->
+            <div class="item">
+                <img src="../resource/images/bj01.jpg" alt="">
+                <!--因为这里文本和图片是换行的 所以用p标签比较合适 用span和a都不太合适-->
+                <p>室外居家空间设计</p>
+            </div>
+
+            <div class="item">
+                <img src="../resource/images/bj01.jpg" alt="">
+                <!--因为这里文本和图片是换行的 所以用p标签比较合适 用span和a都不太合适-->
+                <p>室外居家空间设计</p>
+            </div>
+
+            <div class="item">
+                <img src="../resource/images/bj01.jpg" alt="">
+                <!--因为这里文本和图片是换行的 所以用p标签比较合适 用span和a都不太合适-->
+                <p>室外居家空间设计</p>
+            </div>
+
+            <div class="item">
+                <img src="../resource/images/bj01.jpg" alt="">
+                <!--因为这里文本和图片是换行的 所以用p标签比较合适 用span和a都不太合适-->
+                <p>室外居家空间设计</p>
+            </div>
+
+            <div class="item">
+                <img src="../resource/images/bj01.jpg" alt="">
+                <!--因为这里文本和图片是换行的 所以用p标签比较合适 用span和a都不太合适-->
+                <p>室外居家空间设计</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

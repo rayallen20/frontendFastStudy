@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*
+        1. 要做布局时,先写宽/高和背景图 这样的话就可以看到盒子在何处 盒子有多大
+        */
+        body {
+            background-color: #000;
+        }
+
+        a {
+            /*2. 不要着急确定宽高 先加一个 看效果和位置 再调整具体的宽高*/
+            width: 200px;
+            height: 50px;
+            display: inline-block;
+            /*Tips:设置宽高时可以临时加一个背景色 以便观察*/
+            /*background-color: red;*/
+            color: #fff;
+            font-size: 26px;
+            text-align: center;
+            line-height: 50px;
+            text-decoration: none;
+        }
+
+        a:hover {
+            background-image: url("../resource/images/h.png");
+        }
+    </style>
+</head>
+<body>
+<!--
+分析步骤:
+1. 背景色 给到body
+2. 由于a标签有背景图片 所以需要设置宽高 因此方向上只有块级元素和行内块元素才能做到
+3. 又由于要求4个a标签需要横向排成一排 所以只能是行内块
+-->
+    <a href="#">专区说明</a>
+    <a href="#">申请资格</a>
+    <a href="#">兑换奖励</a>
+    <a href="#">下载游戏</a>
+</body>
+</html>
