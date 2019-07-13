@@ -1,0 +1,17 @@
+.main {
+    width: 950px;
+    text-align: center;
+}
+
+.main > hr {
+    border: 2px solid black;
+}
+
+.main > div {
+    border: 1px solid darkgray;
+    display: inline-block;
+}
+
+.main div span {
+    display: block;
+}

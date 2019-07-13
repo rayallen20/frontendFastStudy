@@ -1,0 +1,17 @@
+body {
+    background-color: black;
+}
+
+body a {
+    display: inline-block;
+    width: 200px;
+    height: 50px;
+    color: white;
+    font-size: 26px;
+    text-align: center;
+    text-decoration: none;
+}
+
+body a:hover {
+    background-image: url("./images/h.png");
+}
