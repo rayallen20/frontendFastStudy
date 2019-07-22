@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .nav {
+            border-top: 2px solid red;
+            background-color: green;
+        }
+
+        .title {
+            /*div的高度是我截图量的.不一定准.此处想表达的意思是line-height=div.height*/
+            line-height: 48px;
+            font-family: "Microsoft YaHei";
+            text-decoration: none;
+            font-size: 18px;
+            padding: 0 14px;
+            color: #666;
+            /*
+            TODO:我的答案没写display:inline-block 没有这个属性,其后果就是:hover时的背景色左右可填充,但上下不可填充.
+            TODO:因为行内元素没有"宽/高"这个概念.实际上左右能把背景色填充上也是因为内部的文本和内边距把左右撑开的.
+            */
+            display: inline-block;
+        }
+
+        .title:link {
+
+        }
+
+        .title:visited {
+
+        }
+
+        .title:hover {
+            color: white;
+            background-color: black;
+        }
+
+        .title:active {
+
+        }
+    </style>
+</head>
+<body>
+<!--惯性思维:先写结构.再填充样式-->
+    <div class="nav">
+        <a href="#" class="title">首页</a>
+        <a href="#" class="title">手机新浪网</a>
+        <a href="#" class="title">网站导航</a>
+        <a href="#" class="title">三个字</a>
+        <a href="#" class="title">字数随意</a>
+        <a href="#" class="title">非常非常非常多的字数</a>
+    </div>
+</body>
+</html>

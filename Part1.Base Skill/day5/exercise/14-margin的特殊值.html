@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .box {
+            width: 250px;
+            height: 250px;
+            background-color: green;
+            /*
+            需求:让盒子水平居中
+            解决方案1:设置margin-left.计算body的整体宽度然后取一半,就是margin-left的值.
+            效果:非常不好.因为浏览器的宽度随时可能变化.而这样做就把div的位置写死了.
+            解决方案2:auto
+            auto:自动取值.只对水平方向的margin有作用.使得margin-left的值和margin-right的值相等.
+            与text-align:center;的区别:text-align:center;的作用不是让盒子水平居中,而是让盒子中的内容(文本/行内块)垂直居中.
+            而margin:0 auto;是将整个盒子自身水平居中.不会对其中的文本生效.
+            */
+            /*margin-left: 100px;*/
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .info {
+            /*注意:margin:0 auto;使盒子水平居中是有前提条件的:应用该属性的元素必须为块级元素.不能是行内元素.*/
+            margin: 0 auto;
+            background-color: red;
+            display: block;
+            width: 300px;
+        }
+    </style>
+    <title>Title</title>
+</head>
+<body>
+     <div class="box">111111111111111</div>
+    <span class="info">行内元素</span>
+</body>
+</html>

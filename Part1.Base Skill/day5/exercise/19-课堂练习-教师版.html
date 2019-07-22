@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*
+        总结:
+        a. 量一个盒子时,很难直接量盒子内容的大小;鞥更多的是测量这个盒子的大小;
+           后期添加padding时,需要在width的基础上减去padding值的.
+
+        b. 如果一个盒子本身没有width,而是通过继承得到的宽度,那么这个盒子在添加padding时,
+           不会撑大盒子.因为浏览器帮忙减掉这部分padding了.
+        */
+
+        /*
+        样式修饰从大到小
+        */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrapper {
+            /*因为取了padding:15px 所以宽度应该减去左内边距和右内边距 即328 - 2 *15 = 298px */
+            /*width: 328px;*/
+            /*减完之后多出来的俩像素是边框的*/
+            width: 298px;
+            border: 1px solid #cccccc;
+            margin:100px auto 0;
+            /*
+            经验:对于这种列表性质的内容,内部的文本/资源大小是不容易测量的.尤其是在这些文本/资源没有下划线的时候.
+            或者说直接测量UI图上的距离,当内部的文本内容变多/变少时,都将不准确.
+            但是反之,边框到文字的距离是容易测量的.所以通常的步骤是:先测量外部容器的宽度,再测量padding,最后用外部
+            容器的宽度减去padding的值,得到内部容器的宽度.
+            */
+            padding: 15px;
+        }
+
+        ul {
+            /*清除ul的小圆点*/
+            list-style: none;
+        }
+
+        .wrapper h4 {
+            border-bottom: 1px solid #cccccc;
+            /*不写单位直接写个2是啥意思?*/
+            /*2倍于当前文字的大小.在块元素中可以直接当高度用.*/
+            /*对于块元素来讲,调整行高可以纵向撑开这个元素.但行内元素不行.*/
+            line-height: 2;
+            margin-bottom: 10px;
+        }
+
+        .wrapper li {
+            height: 30px;
+            line-height: 30px;
+            border-bottom: 1px dashed #cccccc;
+            /*
+            如果没有设置宽度的前提条件下,加了水平方向的padding,那么浏览器会默认将这个元素的padding + width值重新计算为父容器的width值,
+            换言之就是浏览器帮忙减掉该减的宽度值了.
+            */
+            padding-left: 20px;
+        }
+
+        .wrapper li a {
+            color: #666;
+            font-size: 12px;
+            text-decoration: none;
+        }
+
+        .wrapper li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h4 class="title">最新文章/New Articles</h4>
+        <ul>
+            <li><a href="#">北京招聘网页设计、平面设计、php</a></li>
+            <li><a href="#">北京招聘网页设计、平面设计、php</a></li>
+            <li><a href="#">北京招聘网页设计、平面设计、php</a></li>
+            <li><a href="#">北京招聘网页设计、平面设计、php</a></li>
+            <li><a href="#">北京招聘网页设计、平面设计、php</a></li>
+        </ul>
+    </div>
+</body>
+</html>

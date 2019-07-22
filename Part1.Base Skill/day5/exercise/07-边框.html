@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: lime;
+            /*边框的三大部分:大小 样式 颜色*/
+            /*border语法(控制上下左右4条边框)border:边框大小 边框样式 边框颜色*/
+            /*
+            边框样式取值:
+                solid:实线
+                dashed:虚线
+                dotted:点线
+                double:双实线
+
+            颜色取值:具体颜色/16进制/rgb()/rgba()
+            */
+            /*border: 10px double red;*/
+
+            /*单独边框写法:border-方位名词(除center):边框大小 边框样式 边框颜色*/
+            /*border-bottom: 10px solid red;*/
+
+            /*单独设置属性*/
+            /*border-width: 10px;*/
+            /*border-style: solid;*/
+            /*border-color: red;*/
+
+            /*对指定方向的边框的指定属性逐条设置*/
+            border-top-width: 10px;
+            border-top-style: solid;
+            border-top-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

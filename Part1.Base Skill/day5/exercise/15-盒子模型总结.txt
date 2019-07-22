@@ -1,0 +1,33 @@
+盒子模型:
+    内盒模型:width + padding + border(通常来讲我们说的盒子大小就是内盒模型)
+    外盒模型:width + padding + border + margin
+
+border:边框大小 边框样式 边框颜色
+    e.g:border: 1px solid #ccc;
+border-方位名词:
+    e.g:border-top: 1px solid #ccc;
+
+细线表格:
+    border-collapse:collapse (添加在table元素上即可消灭重复边框)
+
+边框圆角:
+    border-radius:10px/50%
+
+padding:内边距
+    1个值:上下左右
+    2个值:上下 左右
+    3个值:上 左右 下
+    4个值:上 右 下 左
+
+    单个方向的取值:
+        padding-方位名词
+            e.g: padding-top: 10px
+
+        注意:行内元素不要写上下padding
+
+margin:外边距
+    取值和padding一致.
+    margin一般用于控制盒子与盒子之间的距离
+    注意:行内元素不要写上下margin
+    特殊值:auto
+        可让盒子水平居中.前提条件为:必须是块级元素且设定了宽度.如果继承了父元素的宽度,则看不出效果.

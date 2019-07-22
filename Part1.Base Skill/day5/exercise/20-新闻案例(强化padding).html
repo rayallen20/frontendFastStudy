@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .news {
+            /*不可以直接量容器里的内容大小,因为文本理所当然的会变化*/
+            width: 116px;
+            /*width: 116 - 15 = 101px*/
+            /*width: 101px;*/
+            height: 33px;
+            border: 1px solid #cccccc;
+            /*padding-left: 15px;*/
+
+            /*
+            更好的解法:我猜测是使用margin-left.这是不可取的.因为这个div里边就是文本了,没有盒子了.
+                     实际上控制容器内的文本和容器之间的距离,更好的解法是使用text-indent:15px.
+            复盘:我为什么没想到?
+            原因:我忘了text-indent的属性值可以使用px.只记得可以使用几个字(也就是不写单位).
+            */
+            text-indent: 15px;
+        }
+
+        .father {
+            width: 200px;
+            height: 100px;
+            border: 1px solid #000000;
+        }
+
+        .son {
+            width: 200px;
+            height: 50px;
+            background-color: lime;
+            padding: 0 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="news">新闻</div>
+
+    <div class="father">
+        <div class="son">11111111</div>
+    </div>
+</body>
+</html>

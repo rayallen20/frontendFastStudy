@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        nav {
+            /*写样式时 优先把宽/高/背景色3个属性写了*/
+            /*注意:以后量UI时 不要从盒子的边框开始量!也就是说不要加边框的宽度.*/
+            /*设置nav a为行内块元素之后,实际上就不需要设置nav的高度了.因为nav会被a撑开.*/
+            /*尽可能的让容器被自身内部的内容撑开,而不是手动设置一个宽高.这样容错率会提高.*/
+            /*
+            经验:开始做布局时,先把宽/高/背景色写上,这是为了让开发者能看到盒子的位置和大小;当完成这个结构部分的布局做完之后,
+            再尝试着把大盒子(我理解这里的意思指的是最外层的容器)的高度删掉.可提升代码的容错率.
+            */
+            /*
+            对容错率的解释:如果给nav手动设置了一个写死的高度,那么当nav a或nav的其他后代元素的高度大于这个写死的高度时,
+            这些元素就会在纵向上超出nav的范围.这是不合规的事.而且会带来一些意想不到的效果(通常而言这种意想不到的问题都不是什么好事).
+            实验:将nav.height设置为40px 同时将anv a.line-height设置为45px 就可以看到a在纵向上超过了nav.
+            */
+            /*height: 40px;*/
+            background-color: lime;
+            border-top: 3px solid red;
+            border-bottom: 1px solid #ccc;
+        }
+
+        nav a {
+            padding: 0 15px;
+            /*行高撑不开行内元素.只能撑开行内块元素和块元素*/
+            /*TODO:为毛? 我猜测是因为行内元素自身没有高度这个属性,所以行高只能调整文本的行间距,并不能调整文本父级容器的高度.*/
+            line-height: 40px;
+            font-size: 14px;
+            color: #666;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color: #000;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#">首页</a>
+        <a href="#">手机新浪网</a>
+        <a href="#">网站导航</a>
+        <a href="#">三个字</a>
+        <a href="#">好多好多好多个字</a>
+    </nav>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            background-color: red;
+            margin: 100px 150px 200px 200px;
+            padding: 200px 30px 300px 40px;
+            width: 1500px;
+            height: 1500px;
+        }
+
+        .inlineBox {
+            width: 350px;
+            height: 500px;
+            display: inline-block;
+        }
+
+        .box1 {
+            background-color: blue;
+            margin: 10px 15px 20px 20px;
+            padding: 20px 30px 30px 40px;
+        }
+
+        .box2 {
+            background-color: green;
+            margin: 20px 30px 30px 40px;
+            padding: 10px 15px 20px 20px;
+        }
+
+        /*
+        TODO:不知道为什么,在2个行内块元素中间水平方向,即使设置margin:0, 也会有5px的间距.
+        */
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="inlineBox box1">111</div>
+        <div class="inlineBox box2">222</div>
+    </div>
+</body>
+</html>

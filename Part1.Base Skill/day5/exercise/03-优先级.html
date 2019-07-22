@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*id选择器只能选择1个元素,而class选择器可以选择多个,相比之下#的作用域比.更小.因此针对性更强.所以#可以覆盖.*/
+        #test {
+            color: pink;
+        }
+
+        /*class能选中的只有调用了这个类的元素,比div的能选中所有div元素,作用域相对而言小(不绝对),因此针对性比div更强,所以可以class覆盖div*/
+        .box {
+            color: yellow;
+            font-size: 40px;
+        }
+
+        /* *和div相比,*选择全部,div只选择div.通常来讲作用域越小的选择器针对性越强,所以div可以覆盖* */
+        div {
+            /*!important优先级最高.这个关键字专门用来提升指定属性的权重.它提升的只是自身位置前方的属性的权重,不是自身位置的选择器的权重*/
+            /*font-size: 20px !important;*/
+            /*color: blue !important;*/
+            color: blue;
+        }
+
+        /*原则:当一个属性自身没有,就用继承的;自身有,就用自身的.所以*可以覆盖body*/
+        * {
+            color: green;
+        }
+
+        body {
+            /*注意:就算给body加了!important,但对于div而言,它还是继承的.所以它的权重还是低于行内样式*/
+            /*从原理上讲,浏览器先解析div自身的属性,发现行内样式有设置color属性值,就根本不解析其祖先元素的color属性了*/
+            color: red !important;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- 继承 < 通配符 < 标签选择器 < 类选择器 < ID选择器 < 行内样式 < !important -->
+    <!--行内样式相比于id选择器,虽然作用域是相同的,但是权重高于id选择器.(实际上这里作用域越小针对性越强的道理已经行不通了...)-->
+    <!--!important只针对单条CSS语句生效,而非针对选择器生效.-->
+    <div id="test" class="box" style="color: purple">请问我的颜色是?</div>
+</body>
+</html>

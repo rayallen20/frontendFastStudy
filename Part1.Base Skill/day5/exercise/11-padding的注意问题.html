@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box {
+            /*行内元素不要写上下padding值,左右可以写.一般控制行内元素的上下,用行高即可.而且还方便.*/
+            background-color: red;
+            padding: 0 30px;
+            line-height: 30px;
+        }
+
+        .father {
+            /*.father的显示宽度为:200(width) + 左内边距(50) + 右内边距(50) = 300px*/
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            padding: 0 50px;
+        }
+
+        .son {
+            /*.son的宽度为200px.此处我的个人理解为:宽度继承自父级,但padding并不继承.因为自身缺省设置padding为0.*/
+            height: 100px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <span class="box">一些内容一些内容一些内容!!!!!!!!!</span>22222222222222
+    <div>111111111111111111111</div>
+
+    <div class="father">
+        <div class="son"></div>
+    </div>
+</body>
+</html>

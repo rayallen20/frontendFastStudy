@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*
+        按公式计算:
+        0,1,0,0
+        */
+        #test1 {
+            color: red;
+        }
+
+        /*
+        按照公式计算:
+        0,1,1,0
+        */
+        #test .son {
+            color: green;
+        }
+
+        /*
+        最终比较:
+        0,1,0,0 < 0,1,1,0 所以是#test .son的权重大
+        */
+    </style>
+</head>
+<body>
+    <div class="box" id="test">
+        <!--
+        我的答案:绿色.原因:#test .son 是它"自身有"的属性,或者说是类选择器的属性,
+        而#test1设置的属性对于它来讲是继承的,所以我认为是绿色.
+        -->
+        <!--
+        结果:绿色.但是我TM看错了.我以为红的选择的是它的父元素.所以我的一通操作都是废操作.
+        -->
+        <div class="son" id="test1">试问这段文字的颜色?</div>
+    </div>
+</body>
+</html>

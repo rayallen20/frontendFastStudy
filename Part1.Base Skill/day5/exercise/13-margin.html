@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box {
+            width: 250px;
+            height: 250px;
+            background-color: pink;
+            /*
+            控制盒子的位置.如果右侧不设置外边距的话,由于盒子是块元素,所以自己要独占一行.因此看起来右侧外边距是占满整个body的.
+            但那是视觉效果.不是margin的宽度.
+                1个值:四周
+                2个值:上下 左右
+                3个值:上 左右 下
+                4个值:上 右 下 左
+                margin也可以单一方向取值.
+            */
+            /*margin: 100px 0 0 100px;*/
+            display: inline-block;
+        }
+
+        .box1 {
+            margin-right: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1"></div>
+    <div class="box"></div>
+</body>
+</html>

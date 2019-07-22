@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            /*像素值越大,圆的越厉害.*/
+            /*border: 10px solid #ccc;*/
+            /*border-radius: 50%;*/
+
+            /*细化:每一个圆角单独控制*/
+            /*2个值:参数1表示左上和右下 参数2表示右上和左下*/
+            /*3个值:则参数1控制的是左上角 参数2控制的是右上角和左下角 参数3控制的是右下角.*/
+            /*4个值:则从参数1到参数4,从左上角开始顺时针控制容器的4个角*/
+            border-radius: 10px 20px 30px 40px;
+        }
+
+        /*使用圆角创造胶囊形*/
+        .rectangle {
+            width: 300px;
+            height: 50px;
+            background-color: pink;
+            /*设置圆角的值为height的一半即可,换言之就是:将高度弯没了,就是胶囊形了.*/
+            border-radius: 25px;
+        }
+
+        .oval {
+            width: 300px;
+            height: 50px;
+            background-color: lawngreen;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="rectangle"></div>
+    <div class="oval"></div>
+</body>
+</html>
