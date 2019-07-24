@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .wrapper {
+            width: 238px;
+            border: 1px solid #cccccc;
+            border-top: none;
+            margin: 100px 0 0 100px;
+        }
+
+        .title {
+            height: 35px;
+            line-height: 35px;
+            border-top: 3px solid #ff4400;
+            border-bottom: 1px solid #cccccc;
+            text-indent: 10px;
+        }
+
+        .img-wrapper {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .list-wrapper {
+            font-size: 12px;
+            /*这里使用padding,是因为li和ul的左右两侧有距离*/
+            padding:0 10px;
+        }
+
+        .list-wrapper li {
+            height: 28px;
+            line-height: 28px;
+            background: url("../resource/square.png") 0 center no-repeat;
+            text-indent: 10px;
+        }
+
+        .list-wrapper li a {
+            text-decoration: none;
+            color: #666666;
+        }
+
+        .list-wrapper li a:hover {
+            text-decoration: underline;
+            color: #ff4400;
+        }
+
+        /*
+        img外没有盒子的情况
+        img {
+            display: inline-block;
+            margin: 0 auto;
+        }
+        */
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="title">搜索趣图</div>
+
+        <div class="img-wrapper">
+            <img src="../resource/happy.gif" alt="happy">
+        </div>
+
+        <ul class="list-wrapper">
+            <li><a href="#">GIF：小胖墩游泳被卡 被救后一脸无辜</a></li>
+            <li><a href="#">GIF：小胖墩游泳被卡 被救后一脸无辜</a></li>
+            <li><a href="#">GIF：小胖墩游泳被卡 被救后一脸无辜</a></li>
+        </ul>
+    </div>
+</body>
+</html>
